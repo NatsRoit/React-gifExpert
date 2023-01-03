@@ -12,12 +12,18 @@
     border-radius: 5px;
     border: 0px solid rgb(97, 32, 158);
     color: black;
-    font-size: 1.2rem;
+    font-size: .8rem;
     outline: none;
-    padding: 10px 15px;
-    width: 100%;
+    padding: 20px 15px;
+    margin: 10px 30%;
+    width: 40%;
   }
   
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
   h2 {
     font-size: 1.5rem;
   }
