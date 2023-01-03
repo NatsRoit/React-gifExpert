@@ -26,7 +26,7 @@ export const AddCategory = ({ onNewCategory }) => {
         <form onSubmit={ onSubmit }>
             <input 
                 type="text"
-                placeholder='Buscar Gifs'
+                placeholder='Search Gif...'
                 value={ inputValue }
                 // Éstas son propiedades HTML, pero también son props de React
                 // Por eso puedo mandar la prop onChange ---> Para hacer que mi input pueda recibir valores y no sea read-only

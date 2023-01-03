@@ -1,6 +1,7 @@
 * {
     font-family: Helvetica, Arial, sans-serif;
     background-color: rgb(234, 234, 234);
+    box-sizing: border-box;
   }
   
   body {
@@ -12,7 +13,7 @@
     border-radius: 5px;
     border: 0px solid rgb(97, 32, 158);
     color: black;
-    font-size: .8rem;
+    font-size: 1rem;
     outline: none;
     padding: 20px 15px;
     margin: 10px 30%;
@@ -29,42 +30,43 @@
   }
   
   h3 {
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin-bottom: 5px;
   }
   
   .card-grid {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
+    background-color: rgb(224, 224, 224);
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.096);
+
+    line-height: 0;
+    -webkit-column-count: 5;
+    -webkit-column-gap: 5px;
+    -moz-column-count: 5;
+    -moz-column-gap: 5px;
+    column-count: 5;
+    column-gap: 30px;
   }
   
   .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-content: center;
     align-items: center;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
-    display: flex;
-    flex-direction: column;
-    height: 0%;
-    max-width: 100%;
-    justify-content: center;
     margin-bottom: 20px;
-    margin-right: 6px;
     overflow: hidden;
   }
   
   .card p {
-    background-color: white;
-    flex: 1;
-    font-size: 1.5rem;
-    margin-top: 5px;
-    padding: 5px 20px 0px 20px;
-    text-align: center;
-  }
-  .card figcaption {
     background-color: white;
     color: rgb(117, 117, 117);
     font-style: italic;
@@ -77,12 +79,51 @@
   
   .card img {
     width: 100%;
+    height: auto !important;
+    margin-bottom:5px;
   }
 
-  @media (min-width: 1200px) {
-    .card {
-      max-width: 21%;
+
+
+
+  @media (max-width: 1200px) {
+    input  {
+      margin: 10px 20%;
+      width: 60%;
     }
+  
+    .card-grid  {
+     -moz-column-count:    4;
+     -webkit-column-count: 4;
+     column-count:         4;
+    }
+ }
+
+ @media (max-width: 1000px) {
+    .card-grid  {
+     -moz-column-count:    3;
+     -webkit-column-count: 3;
+     column-count:         3;
+    }
+ }
+
+ @media (max-width: 800px) {
+  input  {
+    margin: 0px;
+    width: 100%;
   }
 
-  /* @media (min-width: 1200px) { */
+    .card-grid  {
+     -moz-column-count:    2;
+     -webkit-column-count: 2;
+     column-count:         2;
+    }
+ }
+
+ @media (max-width: 400px) {
+  .card-grid  {
+    -moz-column-count:    1;
+    -webkit-column-count: 1;
+    column-count:         1;
+  }
+}
